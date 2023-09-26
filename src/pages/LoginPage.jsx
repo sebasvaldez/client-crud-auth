@@ -1,9 +1,12 @@
-import React from 'react'
+import {useForm} from "react-hook-form";
 
 const LoginPage = () => {
-  return (
-    <div>LoginPage</div>
-  )
-}
+  return <div>
+    <form action="">
 
-export default LoginPage
+
+    </form>
+  </div>;
+};
+
+export default LoginPage;
