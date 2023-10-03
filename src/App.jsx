@@ -11,11 +11,15 @@ import ProtectedRoutes from "./ProtectedRoutes";
 import { AuthProvider } from "./context/AuthContext";
 import { TaskProvider } from "./context/tasksContex";
 
+import NavBar from "./components/NavBar";
+
 function App() {
   return (
     <AuthProvider>
       <TaskProvider>
         <Router>
+          <main className="container mx-auto px-7">
+          <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
@@ -28,6 +32,7 @@ function App() {
               <Route path="/profile" element={<ProfilePage />} />
             </Route>
           </Routes>
+          </main>
         </Router>
       </TaskProvider>
     </AuthProvider>
