@@ -33,6 +33,7 @@ const RegisterPage = () => {
             </span>
           );
         })}
+        <h1 className="text-2xl font-bold">Registrar</h1>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -66,7 +67,7 @@ const RegisterPage = () => {
           {errors.password && (
             <p className="text-red-500">La contraseña es requerida</p>
           )}
-          <button type="submit">Register</button>
+          <button type="submit">Registrarse</button>
         </form>
         <p className="flex gap-x-2 justify-between mt-5">
           Ya tienes cuenta?{" "}

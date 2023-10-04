@@ -59,7 +59,7 @@ const LoginPage = () => {
           {errors.password && (
             <p className="text-red-500 ">La contraseña es requerida</p>
           )}
-          <button type="submit">Entrar</button>
+          <button type="submit" className="bg-sky-500 text-white px-4 py-2 rounded-md my-2">Entrar</button>
         </form>
         <p className="flex gap-x-2 justify-between mt-5">
           No tienes cuenta aun?

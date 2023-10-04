@@ -12,7 +12,7 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [errors, setErrors] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   const signin = async (user) => {
     try {
       const res = await loginRequest(user);
-      console.log(res.data);
+      //console.log(res.data);
       setIsAuthenticated(true);
       setUser(res.data);
     } catch (error) {
@@ -84,7 +84,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = ()=>{
     Cookies.remove('token');
-    setUser(null);
+    setUser([]);
     setIsAuthenticated(false);
 
   }

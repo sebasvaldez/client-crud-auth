@@ -5,7 +5,6 @@ import utc from "dayjs/plugin/utc";
 
 dayjs.extend(utc);
 
-
 const TaskCard = ({ task }) => {
   const { deleteTask } = useTasks();
 
@@ -18,11 +17,11 @@ const TaskCard = ({ task }) => {
             onClick={() => {
               deleteTask(task._id);
             }}
+            className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md"
           >
             Borrar
           </button>
-
-          <Link to={`/tasks/${task._id}`}>Editar</Link>
+          <Link to={`/tasks/${task._id}`} className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded-md">Editar</Link>
         </div>
       </header>
       <p className="text-slate-300">{task.description}</p>
