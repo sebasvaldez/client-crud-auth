@@ -1,0 +1,31 @@
+@media all and (min-width: 414px) {
+  .container-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .box-presentation {
+    padding: 1rem;
+  }
+  .box-presentation h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 1rem;
+  }
+  .title-presentation {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 1rem;
+  }
+}
+
+
+@media all and (min-width: 720px) {
+    .container-presentation{
+        flex-direction: row;
+    }
+}
